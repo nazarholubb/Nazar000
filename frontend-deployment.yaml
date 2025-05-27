@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend
-spec :
+spec:
   replicas: 1
   selector:
     matchLabels:
-    app: frontend
+      app: frontend
   template:
     metadata:
       labels:
-      app: frontend
+        app: frontend
     spec:
-    containers :
-    - name: frontend
-    image: gcr.io/YOUR_PROJECT_ID/frontend:latest
-    ports :
-    - containerPort: 80
+      containers:
+      - name: frontend
+        image: gcr.io/nazar-455518/react-frontend
+        ports:
+        - containerPort: 80
